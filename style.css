@@ -1,0 +1,103 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 10px;
+  background: linear-gradient(135deg, rgb(104, 104, 222), rgb(36, 30, 30));
+}
+.to-do {
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+.to-do h1 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.to-do h1 img {
+  margin-left: 10px;
+  width: 61px;
+  height: 57px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(212, 212, 243);
+  padding: 0%;
+  border-radius: 30px;
+  margin: 23px;
+}
+.row input {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  flex: 1;
+  border-radius: 40px;
+}
+.row button {
+  padding: 16px 50px;
+  background-color: rgb(35, 232, 101);
+  border-radius: 40px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+button:hover {
+  background-color: #2980b9;
+  transform: scale(1.02);
+}
+
+/* Active effect (when clicked) */
+button:active {
+  background-color: #2471a3;
+  transform: scale(0.98);
+}
+.to-do ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 2%;
+  margin-left: 10%;
+  user-select: none;
+  cursor: pointer;
+}
+.delete-button {
+  padding: 5px 12px;
+  background-color: #ff4c4c; /* Red color for the delete button */
+  color: white;
+  font-size: 14px;
+  border: none;
+  margin-left: 240px;
+  border-radius: 25px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.delete-button:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 5px rgba(255, 76, 76, 0.8); /* Glow effect */
+}
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column; /* Stack input and button vertically */
+  }
+  .row input,
+  .row button {
+    width: 100%;
+  }
+}
